@@ -5,7 +5,9 @@ orbs:
 
 jobs:
   build:
-    executor: node/default
+    executor:
+      name: node/default
+      tag: 15.11.0
     steps:
       - checkout
 
@@ -13,10 +15,13 @@ jobs:
           message: ":tools: Building the website..."
           color: "16312092"
 
-      - node/install-packages
+      - node/install-packages:
+          pkg-manager: yarn
+          override-ci-command: "yarn install --frozen-lockfile"
+
       - run:
           name: Building for production environment
-          command: node ./node_modules/@angular/cli/dist/bin build --prod
+          command: "yarn build --prod"
 
       - store_artifacts:
           path: ./dist/ihdeveloper
