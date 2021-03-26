@@ -1,0 +1,34 @@
+version: 2.1
+orbs:
+  node: circleci/node@3.0.0
+  discord: teka23/discord@0.0.1
+
+jobs:
+  build:
+    executor: node/default
+    steps:
+      - checkout
+
+      - discord/notify:
+          message: ":tools: Building the website..."
+          color: "16312092"
+
+      - node/install-packages
+      - run:
+          name: Building for production environment
+          command: node ./node_modules/@angular/cli/dist/bin build --prod
+
+      - store_artifacts:
+          path: ./dist/ihdeveloper
+          destination: ./dist
+
+      - discord/status:
+          fail_only: false
+          failure_message: ":red_circle: Failed to build the website!"
+          success_message: ":tada: The website has been built successfully!"
+
+
+workflows:
+  main:
+    jobs:
+      - build
