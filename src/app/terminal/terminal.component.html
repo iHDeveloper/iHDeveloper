@@ -1,0 +1,10 @@
+<div class="terminal container-fluid p-0">
+    <div class="row min-vh-100 align-items-end">
+        <div class="col">
+            <div class="log container-fluid p-0" *ngFor="let log of logs">
+                <p *ngIf="log.isCommand">{{log.username}}@{{log.hostname}}> [{{log.path}}] $ {{log.message}}</p>
+                <p *ngIf="!log.isCommand">{{log.message}}</p>
+            </div>
+        </div>
+    </div>
+</div>

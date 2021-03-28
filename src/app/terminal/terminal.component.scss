@@ -1,0 +1,13 @@
+.terminal {
+    background-color: black;
+    font-family: monospace;
+    color: rgb(128, 128, 128);
+    overflow: hidden;
+
+    .log {
+
+        p {
+            margin-bottom: 0 !important;
+        }   
+    }
+}
