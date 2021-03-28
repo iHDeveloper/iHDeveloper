@@ -1,3 +1,2 @@
-<!-- <hd-terminal class="w-100 h-100"></hd-terminal> -->
-
-<hd-loading-screen></hd-loading-screen>
+<hd-loading-screen [@showHide]="mode === 'loading-screen' ? 'show' : 'hide'"></hd-loading-screen>
+<hd-terminal [@showHide]="mode === 'terminal' ? 'show' : 'hide'" class="w-100 h-100"></hd-terminal>
