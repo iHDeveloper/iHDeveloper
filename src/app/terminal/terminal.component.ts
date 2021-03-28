@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 interface TerminalLogMessage {
     message: string;
@@ -14,25 +14,20 @@ interface TerminalLogMessage {
     styleUrls: ['./terminal.component.scss']
 })
 export class TerminalComponent implements OnInit {
-    username = 'user';
-    hostname = 'HD-Server';
-    path = '~/minecraft-server';
+    @Input('intro') isIntro: boolean = false;
+    @Input() username = 'user';
+    @Input() hostname = 'HD-Server';
+    @Input() path = '~/myself';
+    @Input() command?: string;
 
     logs: TerminalLogMessage[] = [];
-
-    private generator = [
-        "@java -Xmx4096M -jar minecraft.jar",
-        "Loading libraries...",
-        "Initializing OpenGL...",
-        "Starting Minecraft Client v1.8.9...",
-    ];
-    private index = 0;
-    private autoInterval?: any;
 
     constructor() {}
 
     ngOnInit(): void {
-        this.autoInterval = setInterval(() => this.auto(), 250);
+        if (this.command) {
+            this.execute(this.command);
+        }
     }
 
     private execute(command: string): void {
@@ -50,23 +45,5 @@ export class TerminalComponent implements OnInit {
             message: message,
             isCommand: false
         });
-    }
-
-    private auto() {
-        if (this.autoInterval && this.index >= this.generator.length) {
-            clearInterval(this.autoInterval);
-            return;
-        }
-
-        const message = this.generator[this.index];
-        if (message.startsWith("@#")) {
-            this.path = message.substring(2);
-        } else if (message.startsWith("@")) {
-            this.execute(message);
-        } else {
-            this.print(message);
-        }
-
-        this.index++;
     }
 }

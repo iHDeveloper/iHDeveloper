@@ -1,7 +1,13 @@
-<div class="terminal container-fluid p-0">
-    <div class="row min-vh-100 align-items-end">
+<div class="terminal container-fluid">
+    <div class="row align-items-end" *ngIf="isIntro">
+        <div class="intro col mb-1">
+            <h1 class="display-1">iHDeveloper</h1>
+            <h2>Game Developer - Full Stack Developer</h2>
+        </div>
+    </div>
+    <div class="row align-items-end">
         <div class="col">
-            <div class="log container-fluid p-0" *ngFor="let log of logs">
+            <div class="log container-fluid" *ngFor="let log of logs">
                 <p *ngIf="log.isCommand">{{log.username}}@{{log.hostname}}> [{{log.path}}] $ {{log.message}}</p>
                 <p *ngIf="!log.isCommand">{{log.message}}</p>
             </div>
