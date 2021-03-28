@@ -6,14 +6,11 @@
     div.black-background {
         background-color: black;
         opacity: .5;
+        min-height: 5em;
     }
 
-    div.text {
-        background-color: transparent;
+    div.content {
+        background-color: rgba(0, 0, 0, .45);
         color: white;
-
-        h1, h5 {
-            text-align: center;
-        }
     }
 }

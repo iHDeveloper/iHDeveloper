@@ -4,13 +4,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { TerminalComponent } from './terminal/terminal.component';
-import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
+import { MinecraftComponent } from './minecraft/minecraft.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TerminalComponent,
-    LoadingScreenComponent
+    MinecraftComponent
   ],
   imports: [
     BrowserModule,
