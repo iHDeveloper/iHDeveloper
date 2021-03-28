@@ -1,11 +1,19 @@
 .loading-screen {
-    display: flex;
     background-image: url("/assets/dirt-texture.png");
     background-size: 16px 16px;
     background-repeat: repeat;
 
-    div {
+    div.black-background {
         background-color: black;
-        opacity: 0.5;
+        opacity: .5;
+    }
+
+    div.text {
+        background-color: transparent;
+        color: white;
+
+        h1, h5 {
+            text-align: center;
+        }
     }
 }
