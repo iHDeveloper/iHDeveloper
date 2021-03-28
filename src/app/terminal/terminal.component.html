@@ -1,8 +1,8 @@
 <div class="terminal container-fluid">
     <div class="row align-items-end" *ngIf="isIntro">
         <div class="intro col mb-1">
-            <h1 class="display-1">iHDeveloper</h1>
-            <h2>Game Developer - Full Stack Developer</h2>
+            <ng-content select="h1"></ng-content>
+            <ng-content select="h2"></ng-content>
         </div>
     </div>
     <div class="row align-items-end">
