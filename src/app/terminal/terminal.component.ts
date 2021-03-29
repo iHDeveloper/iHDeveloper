@@ -30,20 +30,20 @@ export class TerminalComponent implements OnInit {
         }
     }
 
-    private execute(command: string): void {
+    print(message: string): void {
+        this.logs.push({
+            message: message,
+            isCommand: false
+        });
+    }
+
+    execute(command: string): void {
         this.logs.push({
             message: command,
             username: this.username,
             hostname: this.hostname,
             path: this.path,
             isCommand: true
-        });
-    }
-
-    private print(message: string): void {
-        this.logs.push({
-            message: message,
-            isCommand: false
         });
     }
 }
