@@ -1,3 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'assets/font/style.css';
+
+html {
+    background-color: black;
+}
+
+.btn {
+    background-image: url('assets/button.png');
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    // border: 0 !important;
+    border-color: transparent !important;
+    // padding: 6px 24px 6px 24px !important;
+
+    &:hover {
+        color: yellow !important;
+        // border-left-color: black !important;
+        // border-right-color: black !important;
+    }
+
+    &:focus {
+        outline: 0 !important;
+        box-shadow: 0 0 0 0 transparent !important;
+    }
+}
