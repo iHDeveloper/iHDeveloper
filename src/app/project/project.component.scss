@@ -1,6 +1,7 @@
-.container {
+.container-sm {
     background-color: rgba(0,0,0, .5);
     border: 4px solid white;
+    max-width: 550px !important;
 
     .state {
         color: red;
