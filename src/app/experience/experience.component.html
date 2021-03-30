@@ -1,0 +1,19 @@
+<div class="container-sm minecraft-container p-3">
+    <div class="d-flex">
+        
+        <div class="flex-shrink-0">
+            <ng-content select="img"></ng-content>
+        </div>
+        <div class="d-inline-flex flex-column ms-4">
+            <h3 class="m-0">
+                <ng-content select="span[name]"></ng-content>
+            </h3>
+            <p class="lead mb-1">
+                <ng-content select="span[position]"></ng-content>
+            </p>
+            <p class="job-duration m-0">
+                <ng-content select="span[duration]"></ng-content>
+            </p>
+        </div>
+    </div>
+</div>

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { TerminalComponent } from './terminal/terminal.component';
 import { MinecraftComponent } from './minecraft/minecraft.component';
 import { ProjectComponent } from './project/project.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TerminalComponent,
     MinecraftComponent,
-    ProjectComponent
+    ProjectComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
