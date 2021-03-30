@@ -1,9 +1,12 @@
 <div class="container-sm minecraft-container pt-2 pb-2 pe-4 ps-4 m-2">
     <div class="row">
-        <div class="col-9">
-            <div class="d-inline-flex">
-                <h4>{{ name }}</h4>
-                <p class="state italic m-0 ms-1" *ngIf="state !== undefined">{{ state }}</p>
+        <div class="col-9 p-0">
+            <div class="d-flex flex-column">
+                <div class="d-inline-flex">
+                    <h4 class="m-0">{{ name }}</h4>
+                    <p class="state italic m-0 ms-1" *ngIf="state !== undefined">{{ state }}</p>
+                </div>
+                <p class="tag itatlic m-0 ms-1" *ngIf="tags !== undefined">{{ tags }}</p>
             </div>
         </div>
         <div class="col-1"></div>
@@ -13,7 +16,7 @@
             </div>
         </div>
     </div>
-    <p class="lead">
+    <p class="lead text-center">
         {{ description }}
     </p>
     <div class="row">

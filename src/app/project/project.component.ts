@@ -12,6 +12,7 @@ export class ProjectComponent implements OnInit {
   @Input() state?: string;
   @Input() website?: string;
   @Input() github?: string;
+  @Input() tags?: string;
 
   constructor() { }
 
