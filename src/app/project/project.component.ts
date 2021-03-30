@@ -10,6 +10,7 @@ export class ProjectComponent implements OnInit {
   @Input() description = "A simple information about the project";
   @Input() version = "1.0.0"
   @Input() state?: string;
+  @Input() website?: string;
 
   constructor() { }
 
