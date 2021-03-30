@@ -19,12 +19,8 @@
     <div class="row">
         <div class="col-4"></div>
         <div class="col-6 d-flex justify-content-end align-items-center">
-            <button class="btn btn-primary" type="button" *ngIf="website !== undefined">Website</button>
-            <button class="btn btn-primary" type="button">Github</button>
-            <!-- <button class="btn btn-primary" type="button">
-                <img class="github-icon" src="assets/github.png" width="32" height="32">
-            </button> -->
-            <!-- <img class="github-icon" src="assets/github.png" width="32" height="32"> -->
+            <a class="btn btn-primary" href="{{ website }}" target="_blank" *ngIf="website !== undefined">Website</a>
+            <a class="btn btn-primary" href="{{ github }}" target="_blank" *ngIf="github !== undefined">Github</a>
         </div>
         <div class="col-2 d-flex justify-content-end">
             <div class="align-self-center">

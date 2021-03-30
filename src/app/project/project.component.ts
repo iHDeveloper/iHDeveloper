@@ -11,6 +11,7 @@ export class ProjectComponent implements OnInit {
   @Input() version = "1.0.0"
   @Input() state?: string;
   @Input() website?: string;
+  @Input() github?: string;
 
   constructor() { }
 
