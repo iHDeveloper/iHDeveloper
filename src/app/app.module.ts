@@ -9,18 +9,15 @@ import { ProjectComponent } from './project/project.component';
 import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TerminalComponent,
-    MinecraftComponent,
-    ProjectComponent,
-    ExperienceComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        TerminalComponent,
+        MinecraftComponent,
+        ProjectComponent,
+        ExperienceComponent
+    ],
+    imports: [BrowserModule, BrowserAnimationsModule],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
