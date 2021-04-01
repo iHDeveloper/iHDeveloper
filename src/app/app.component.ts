@@ -12,7 +12,7 @@ export class AppComponent implements AfterViewInit {
     ngAfterViewInit(): void {
         if (this.intro) {
             this.intro.print('Last Login: ' + new Date());
-            this.intro.execute('whoami');
+            this.intro.execute('systemctl start navigation-bar');
         }
     }
 }

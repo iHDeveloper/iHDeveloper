@@ -3,8 +3,8 @@
 @import 'scrollbar.scss';
 @import 'assets/font/style.css';
 
-html {
-    background-color: black;
+html, body {
+    background-color: black !important;
 }
 
 .minecraft-container {

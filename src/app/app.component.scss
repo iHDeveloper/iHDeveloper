@@ -1,0 +1,18 @@
+.minecraft-navbar {
+    background-image: url("/assets/dirt-texture.png");
+    background-repeat: repeat;
+    font-family: 'Minecraft Regular', monospace;
+
+    .container-fluid {
+        background-color: rgba(0, 0, 0, .45);
+        color: white !important;
+    }
+
+    a.nav-link {
+        color: white !important;
+
+        &.active, &:hover {
+            color: yellow !important;
+        }
+    }
+}
