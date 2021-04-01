@@ -10,6 +10,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageHomeComponent } from './page-home/page-home.component';
 import { PageAwardsComponent } from './page-awards/page-awards.component';
+import { AwardComponent } from './award/award.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { PageAwardsComponent } from './page-awards/page-awards.component';
         ProjectComponent,
         ExperienceComponent,
         PageHomeComponent,
-        PageAwardsComponent
+        PageAwardsComponent,
+        AwardComponent
     ],
     imports: [
         BrowserModule,

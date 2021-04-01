@@ -19,6 +19,7 @@ export class TerminalComponent implements OnInit {
     @Input() hostname = 'HD-Server';
     @Input() path = '~/myself';
     @Input() command?: string;
+    @Input() log?: string;
 
     logs: TerminalLogMessage[] = [];
 
@@ -27,6 +28,9 @@ export class TerminalComponent implements OnInit {
     ngOnInit(): void {
         if (this.command) {
             this.execute(this.command);
+        }
+        if (this.log) {
+            this.print(this.log);
         }
     }
 
