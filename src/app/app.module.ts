@@ -7,6 +7,9 @@ import { TerminalComponent } from './terminal/terminal.component';
 import { MinecraftComponent } from './minecraft/minecraft.component';
 import { ProjectComponent } from './project/project.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PageHomeComponent } from './page-home/page-home.component';
+import { PageAwardsComponent } from './page-awards/page-awards.component';
 
 @NgModule({
     declarations: [
@@ -14,9 +17,15 @@ import { ExperienceComponent } from './experience/experience.component';
         TerminalComponent,
         MinecraftComponent,
         ProjectComponent,
-        ExperienceComponent
+        ExperienceComponent,
+        PageHomeComponent,
+        PageAwardsComponent
     ],
-    imports: [BrowserModule, BrowserAnimationsModule],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule
+    ],
     providers: [],
     bootstrap: [AppComponent]
 })
