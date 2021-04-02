@@ -52,19 +52,19 @@ jobs:
 
       - run:
           name: "Publish Release on GitHub"
-          command: "ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete v${CIRCLE_SHA1} ./dist"
+          command: "ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${CIRCLE_SHA1:0:7} ./dist"
 
       - discord/status:
           fail_only: false
-          failure_message: ":red_circle: Failed to publish $CIRCLE_PROJECT_REPONAME/v${CIRCLE_SHA1} on Github"
-          success_message: ":tada: The $CIRCLE_PROJECT_REPONAME/v${CIRCLE_SHA1} has been published successfully on Github!"
+          failure_message: ":red_circle: Failed to publish $CIRCLE_PROJECT_REPONAME/${CIRCLE_SHA1:0:7} on Github"
+          success_message: ":tada: The $CIRCLE_PROJECT_REPONAME/${CIRCLE_SHA1:0:7} has been published successfully on Github!"
 
   deploy_to_firebase:
     docker:
       - image: circleci/node:lts
     steps:
       - discord/notify:
-          message: ":rocket: Publishing to Firebase :fire:..."
+          message: ":rocket: Publishing to :fire: Firebase..."
           color: "16312092"
 
       - attach_workspace:
@@ -75,8 +75,8 @@ jobs:
 
       - discord/status:
           fail_only: false
-          failure_message: ":red_circle: Failed to publish $CIRCLE_PROJECT_REPONAME/v${CIRCLE_SHA1} on :fire: Firebase!"
-          success_message: ":tada: The $CIRCLE_PROJECT_REPONAME/v${CIRCLE_SHA1} has been published successfully on :fire: Firebase!"
+          failure_message: ":red_circle: Failed to publish $CIRCLE_PROJECT_REPONAME/${CIRCLE_SHA1:0:7} on :fire: Firebase!"
+          success_message: ":tada: The $CIRCLE_PROJECT_REPONAME/${CIRCLE_SHA1} has been published successfully on :fire: Firebase!"
 
 
 workflows:

@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageHomeComponent } from './page-home/page-home.component';
 import { PageAwardsComponent } from './page-awards/page-awards.component';
 import { AwardComponent } from './award/award.component';
+import { PageBioComponent } from './page-bio/page-bio.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { AwardComponent } from './award/award.component';
         ExperienceComponent,
         PageHomeComponent,
         PageAwardsComponent,
-        AwardComponent
+        AwardComponent,
+        PageBioComponent
     ],
     imports: [
         BrowserModule,
