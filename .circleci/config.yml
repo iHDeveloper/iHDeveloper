@@ -76,7 +76,7 @@ jobs:
       - discord/status:
           fail_only: false
           failure_message: ":red_circle: Failed to publish $CIRCLE_PROJECT_REPONAME/${CIRCLE_SHA1:0:7} on :fire: Firebase!"
-          success_message: ":tada: The $CIRCLE_PROJECT_REPONAME/${CIRCLE_SHA1} has been published successfully on :fire: Firebase!"
+          success_message: ":tada: The $CIRCLE_PROJECT_REPONAME/${CIRCLE_SHA1:0:7} has been published successfully on :fire: Firebase!"
 
 
 workflows:
