@@ -2,6 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@3.0.0
   discord: teka23/discord@0.0.1
+  firebase-deploy: azdevs/firebase-deploy@1.0.0
 
 jobs:
   build:
@@ -10,30 +11,86 @@ jobs:
       tag: 15.11.0
     steps:
       - checkout
-
       - discord/notify:
-          message: ":tools: Building the website..."
-          color: "16312092"
+        message: ":tools: Building the website..."
+        color: "16312092"
 
       - node/install-packages:
-          pkg-manager: yarn
-          override-ci-command: "yarn install --frozen-lockfile"
+        pkg-manager: yarn
+        override-ci-command: "yarn install --frozen-lockfile"
 
       - run:
-          name: Building for production environment
-          command: "yarn build --prod"
+        name: Building for production environment
+        command: "yarn build --prod"
 
       - store_artifacts:
-          path: ./dist/ihdeveloper
-          destination: ./dist
+        path: ./dist/ihdeveloper
+        destination: ./dist
+
+      - persist_to_workspace:
+        root: /tmp/github
+        paths:
+          - dist
+
+      - persist_to_workspace:
+        root: /tmp/firebase
+        paths:
+          - dist
+          - firebase.json
+          - .firebaserc
 
       - discord/status:
-          fail_only: false
-          failure_message: ":red_circle: Failed to build the website!"
-          success_message: ":tada: The website has been built successfully!"
+        fail_only: false
+        failure_message: ":red_circle: Failed to build the website!"
+        success_message: ":tada: The website has been built successfully!"
+
+  deploy_to_github:
+    docker:
+      - image: cibuilds/github:0.10
+    steps:
+      - attach_workspace:
+        at: /tmp/github
+
+      - discord/notify:
+        message: ":rocket: Publishing to Github..."
+        color: "16312092"
+
+      - run:
+        name: "Publish Release on GitHub"
+        command: "ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete v${CIRCLE_SHA1} ./dist"
+
+      - discord/status:
+        fail_only: false
+        failure_message: ":red_circle: Failed to publish $CIRCLE_PROJECT_REPONAME/$VERSION"
+        success_message: ":tada: The $CIRCLE_PROJECT_REPONAME/$VERSION has been published successfully!"
+
+  deploy_to_firebase:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - discord/notify:
+        message: ":rocket: Publishing to Firebase :fire:..."
+        color: "16312092"
+
+      - attach_workspace:
+        at: /tmp/firebase
+
+      - firebase-deploy/deploy:
+        token: $FIREBASE_DEPLOY_TOKEN
+
+      - discord/status:
+        fail_only: false
+        failure_message: ":red_circle: Failed to publish $CIRCLE_PROJECT_REPONAME/$VERSION"
+        success_message: ":tada: The $CIRCLE_PROJECT_REPONAME/$VERSION has been published successfully!"
 
 
 workflows:
   main:
     jobs:
       - build
+      - deploy_to_firebase:
+        require:
+        - build
+      - deploy_to_github:
+        require:
+        - build
