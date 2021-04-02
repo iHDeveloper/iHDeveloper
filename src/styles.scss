@@ -7,6 +7,10 @@ html, body {
     background-color: black !important;
 }
 
+strong {
+    font-family: 'Minecraft Bold', monospace;
+}
+
 .minecraft-container {
     background-color: rgba(0,0,0, .5) !important;
     border: 4px solid white !important;
@@ -33,4 +37,16 @@ html, body {
         outline: 0 !important;
         box-shadow: 0 0 0 0 transparent !important;
     }
+}
+
+.color-aqua {
+    color: aqua !important;
+}
+
+.color-blue {
+    color: aqua !important;
+}
+
+.color-pink {
+    color: pink !important;
 }
