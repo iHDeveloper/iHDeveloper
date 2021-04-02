@@ -28,12 +28,7 @@ jobs:
           destination: ./dist
 
       - persist_to_workspace:
-          root: /tmp/github
-          paths:
-            - dist
-
-      - persist_to_workspace:
-          root: /tmp/firebase
+          root: .
           paths:
             - dist
             - firebase.json
