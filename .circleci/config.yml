@@ -44,7 +44,7 @@ jobs:
       - image: cibuilds/github:0.10
     steps:
       - attach_workspace:
-          at: /tmp/github
+          at: .
 
       - discord/notify:
           message: ":rocket: Publishing to Github..."
@@ -56,8 +56,8 @@ jobs:
 
       - discord/status:
           fail_only: false
-          failure_message: ":red_circle: Failed to publish $CIRCLE_PROJECT_REPONAME/$VERSION"
-          success_message: ":tada: The $CIRCLE_PROJECT_REPONAME/$VERSION has been published successfully!"
+          failure_message: ":red_circle: Failed to publish $CIRCLE_PROJECT_REPONAME/v${CIRCLE_SHA1}"
+          success_message: ":tada: The $CIRCLE_PROJECT_REPONAME/v${CIRCLE_SHA1} has been published successfully!"
 
   deploy_to_firebase:
     docker:
@@ -68,7 +68,7 @@ jobs:
           color: "16312092"
 
       - attach_workspace:
-          at: /tmp/firebase
+          at: .
 
       - firebase-deploy/deploy:
           token: $FIREBASE_DEPLOY_TOKEN
