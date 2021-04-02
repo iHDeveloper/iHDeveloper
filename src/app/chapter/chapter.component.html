@@ -1,0 +1,11 @@
+<div class="contaier-sm">
+    <p class="year lead">{{ year }}</p>
+    <h5 class="chapter pb-1 mb-2">Chapter {{ num }}</h5>
+    <h4 class="text-center mb-3"><strong>{{ title }}</strong></h4>
+    <p class="paragraph lead">
+        <ng-content select="ng-container"></ng-content>
+    </p>
+
+    <img class="img-fluid mx-auto d-block mb-0" src="assets/bio/ch1-1.png" />
+    <p class="img-tag lead">My First Program in 2014</p>
+</div>

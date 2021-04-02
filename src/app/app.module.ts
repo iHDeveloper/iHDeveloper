@@ -13,6 +13,7 @@ import { PageAwardsComponent } from './page-awards/page-awards.component';
 import { AwardComponent } from './award/award.component';
 import { PageBioComponent } from './page-bio/page-bio.component';
 import { LangComponent } from './lang/lang.component';
+import { ChapterComponent } from './chapter/chapter.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { LangComponent } from './lang/lang.component';
         PageAwardsComponent,
         AwardComponent,
         PageBioComponent,
-        LangComponent
+        LangComponent,
+        ChapterComponent
     ],
     imports: [
         BrowserModule,
