@@ -14,7 +14,6 @@ import { AwardComponent } from './award/award.component';
 import { PageBioComponent } from './page-bio/page-bio.component';
 import { LangComponent } from './lang/lang.component';
 import { ChapterComponent } from './chapter/chapter.component';
-import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
     declarations: [
@@ -33,8 +32,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        AppRoutingModule,
-        ScullyLibModule
+        AppRoutingModule
     ],
     providers: [],
     bootstrap: [AppComponent]

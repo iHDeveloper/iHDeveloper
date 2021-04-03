@@ -23,17 +23,9 @@ jobs:
           name: Building for production environment
           command: "yarn build --prod"
 
-      - run:
-          name: Generating static site from the build
-          command: "yarn run scully"
-
       - store_artifacts:
           path: ./dist/ihdeveloper
-          destination: ./dist/dynamic
-
-      - store_artifacts:
-          path: ./dist/static
-          destination: ./dist/static
+          destination: ./dist
 
       - persist_to_workspace:
           root: .
