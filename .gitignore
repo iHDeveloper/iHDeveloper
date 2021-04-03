@@ -4,6 +4,7 @@
 .scully
 
 # Firebase
+.firebase
 service-account.json
 
 # compiled output
