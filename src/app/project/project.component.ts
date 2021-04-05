@@ -9,9 +9,9 @@ export class ProjectComponent implements OnInit {
     @Input() name = 'Project Name';
     @Input() description = 'A simple information about the project';
     @Input() version = '1.0.0';
-    @Input() state?: string;
+    @Input() state?: string;    
+    @Input() websiteName?: string;
     @Input() website?: string;
-    @Input() github?: string;
     @Input() tags?: string;
 
     constructor() {}
