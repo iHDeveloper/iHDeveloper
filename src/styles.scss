@@ -4,7 +4,12 @@
 @import 'assets/font/style.css';
 
 html, body {
-    background-color: black !important;
+    background-image: url("/assets/dirt-texture.png");
+    background-repeat: repeat;
+
+    .body-container {
+        background-color: rgba(0, 0, 0, .75);
+    }
 }
 
 strong {
