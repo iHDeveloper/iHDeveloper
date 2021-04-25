@@ -10,7 +10,7 @@ I like creating games and web applications.
 Checkout out my website [ihdeveloper.me](https://ihdeveloper.me)
 
 Contact me: 
-[@iHDeveloper](https://twitter.com/iHDeveloper)
+[@iHDeveloper](https://twitter.com/iHDeveloper) -
 [Discord Server](https://discord.com/invite/PYjh5xg)
 
 
