@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AwardComponent implements OnInit {
   @Input('month') month = "March";
-  @Input('img') img = 'question-mark-2d.png';
+  @Input('img') img = 'texture/question-mark-2d.png';
 
   constructor() { }
 

@@ -5,7 +5,7 @@
 
 html, body {
     overflow-x: hidden;
-    background-image: url("/assets/dirt-texture.png");
+    background-image: url("/assets/texture/dirt.png");
     background-repeat: repeat;
 
     .body-container {
@@ -31,7 +31,7 @@ strong {
 }
 
 .btn {
-    background-image: url('assets/button.png');
+    background-image: url('assets/texture/button.png');
     background-color: transparent !important;
     background-repeat: no-repeat;
     background-size: contain;
