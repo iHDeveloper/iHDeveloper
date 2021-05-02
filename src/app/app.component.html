@@ -1,16 +1,16 @@
 <!-- Intro -->
 
-<div class="pb-1">
+<!-- <div class="pb-1">
   <hd-terminal #introTerminal class="w-100 h-100" [intro]="true">
     <h1 class="display-1">iHDeveloper</h1>
     <h2>Game Developer - Full Stack Developer</h2>
-</hd-terminal>
-</div>
+  </hd-terminal>
+</div> -->
 
 <!-- Navbar -->
 
 <hd-terminal command=""></hd-terminal>
-<nav class="minecraft-navbar navbar navbar-expand-lg navbar-light bg-light p-0 sticky-top mb-4">
+<nav class="minecraft-navbar navbar navbar-expand-lg navbar-light bg-light p-0 fixed-top mb-4">
   <div class="container-fluid">
     <a class="navbar-brand">&lt;iHDeveloper /&gt;</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
   </div>
 </nav>
 
-<div class="mb-4">
+<div class="mb-4" style="margin-top: 4em;">
   <router-outlet #outlet></router-outlet>
 </div>
 
