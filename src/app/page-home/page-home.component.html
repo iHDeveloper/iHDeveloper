@@ -9,7 +9,7 @@
   <div class="container-fluid p-2 d-flex flex-column align-items-center justify-content-center">
     <h6 class="text-center mb-2">Video of my work</h6>
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BXlPDq4DVlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h6 class="video-desc text-center mb-2">Spigot Dev Tools (Minecraft Mod) - Humans (Spigot Plugin)</h6>
+    <h6 class="desc text-center mb-2">Spigot Dev Tools (Minecraft Mod) - Humans (Spigot Plugin)</h6>
   </div>
 </hd-minecraft>
 
@@ -18,39 +18,51 @@
 <hd-terminal class="w-100 h-100" command="cat ./about-me.html"></hd-terminal>
 <hd-minecraft>
     <div class="container pt-2 ps-2 pe-2">
-        <h6 class="text-center mb-2">&gt; HTML Viewer &lt;</h6>
+        <h6 class="text-center mb-2">About who I am</h6>
         <p class="lead text">
-            I'm game and full stack developer. I like to create games that players enjoy playing.
-            <br />
-            And, I like designing web applications too!
-            <br />
-            <br />
-            My hobbies are reading, gaming, and walking.
-            <br />
-            <br />
-            I have been programming for 7 years since Grade 6! And, I know about 10 programming languages.
-            I like to try different technologies and languages with different designs.
+            I like to mod things and design backend systems. I create backend systems, software, websites and APIs.
         </p>
     </div>
 </hd-minecraft>
 
 <!-- Projects -->
 
-<hd-terminal class="w-100 h-100" command="cat ./projects.html"></hd-terminal>
+<hd-terminal id="projects" class="w-100 h-100" command="cat ./projects.html"></hd-terminal>
 <hd-minecraft>
     <div class="container-fluid pt-2 ps-2 pe-4">
         <h6 class="text-center mb-2">I have worked on these projects</h6>
-        <div class="d-flex flex-wrap justify-content-around">
-            <hd-project name="The Hunters" description="UHC Speedrun in Minecraft" version="1.0" tags="UHC - Game" websiteName="Spigot" website="https://www.spigotmc.org/resources/the-hunters.81065/"></hd-project>
-            <hd-project name="React GUI" description="Custom GUI library for Minecraft" version="1.0" tags="GUI - Spigot Library" websiteName="Spigot" website="https://www.spigotmc.org/resources/lib-react-gui.91047/"></hd-project>
-            <hd-project name="Sign Editor API" description="Simple API for custom sign editors!" version="1.0" tags="GUI - Spigot Library" websiteName="Spigot" website="https://www.spigotmc.org/resources/api-sign-editor.91056/"></hd-project>
-            <hd-project name="Spigot Starter Kit" description="Quick way to start Spigot project!" version="1.0" tags="Spigot - Project Template" websiteName="Github" website="https://github.com/iHDeveloper/spigot-starter-kit"></hd-project>
-            <hd-project name="Hypixel Events" description="Website that tracks Hypixel events" version="0.1.3" state="BETA" tags="Web Application" websiteName="Website" website="https://hypixel.ihdeveloper.me"></hd-project>
-            <hd-project name="React Item" description="Custom Items library for Minecraft" version="0.8" state="BETA" tags="Item - Spigot Library" websiteName="Spigot" website="https://www.spigotmc.org/resources/lib-react-item.91050/"></hd-project>
-            <hd-project name="Kotraction" description="Kotlin library for using Discord interactions" version="0.1" state="ALPHA" tags="Interactions - Discord Library" websiteName="Github" website="https://github.com/iHDeveloper/kotraction"></hd-project>
-            <hd-project name="Zstd Connection" description="Compress using Zstd in bukkit-bungee server" version="0.0" state="W.I.P" tags="Bungee/Spigot Plugin" websiteName="Github" website="https://github.com/iHDeveloper/zstd-connection"></hd-project>
-            <hd-project name="Humans" description="Multiplayer game with open world following a certain timeline and events" version ="0.1" state="ALPHA" tags="Open World - Game" websiteName="Github" website="https://github.com/iHDeveloper/Humans"></hd-project>
+        <div class="d-flex flex-column flex-wrap justify-content-center align-items-center">
+            <hd-project name="Spigot Dev Tools" year="2021" tags="Tool - Modded Minecraft" websiteName="Github" website="https://github.com/iHDeveloper/spigot-dev-tools">
+                <span description>
+                    Minecraft mod for providing tools to understand the game world on the server-side
+                </span>
+                <ul>
+                    <li>Design a protocol between the mod/plugin that's flexible on most game versions</li>
+                    <li>Design an API to require one-line of Java code to easy to use</li>
+                </ul>
+            </hd-project>
+            <hd-project name="Humans" year="2020" tags="Open World - Modded Minecraft" websiteName="Github" website="https://github.com/iHDeveloper/Humans">
+                <span description>
+                    Multiplayer game with open world following a certain timeline and events
+                </span>
+                <ul>
+                    <li>Design flexible architecture to easily manipulate the game world</li>
+                    <li>Create scene system for presenting stories in the game</li>
+                    <li>Write NPC system that doesn't relay on any third-party plugins</li>
+                </ul>
+            </hd-project>
+            <hd-project name="RAForSB" year="2018" tags="Remote Access For Smart Board" websiteName="Showcase" website="https://github.com/iHDeveloper/Humans">
+                <span description>
+                    Mobile App for allowing the user to access and control the smart board
+                </span>
+                <ul>
+                    <li>Design protocol for communicating between the remote and the board</li>
+                    <li>Use ElectronJS to provide an interactive display</li>
+                    <li>Writes a middleman server using Java to connect between the remote and the board</li>
+                </ul>
+            </hd-project>
         </div>
+        <h6 class="desc text-center mb-2">and more...</h6>
     </div>
 </hd-minecraft>
 

@@ -7,10 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
     @Input() name = 'Project Name';
-    @Input() description = 'A simple information about the project';
-    @Input() version = '1.0.0';
-    @Input() state?: string;    
     @Input() websiteName?: string;
+    @Input() year?: string;
     @Input() website?: string;
     @Input() tags?: string;
 
