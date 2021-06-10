@@ -14,8 +14,13 @@ Contact me:
 [Discord Server](https://discord.com/invite/PYjh5xg)
 
 
-[![iHDeveloper Github Stats](https://github-readme-stats.vercel.app/api?username=iHDeveloper&count_private=true&show_icons=true&theme=gotham)](https://github-readme-stats.vercel.app/api?username=iHDeveloper&count_private=true&show_icons=true&theme=gotham)
+### Github Stats
+<div align="center">
+  <img height="175em" src="https://github-readme-stats.vercel.app/api?username=iHDeveloper&count_private=true&show_icons=true&theme=gotham"/>
+  <img height="175em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iHDeveloper&theme=gotham&layout=compact&langs_count=6"/>
+</div>
 
 👨‍💻 Hard Worker (Proven by **Discord RPC Glitch**)
 
 [![Discord RPC Glitch Prove](./discord-rpc-glitch-prove.png)](https://ihdeveloper.me)
+
