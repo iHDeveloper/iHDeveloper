@@ -18,10 +18,11 @@ Contact me:
 <div align="center">
   <img height="175em" src="https://github-readme-stats.vercel.app/api?username=iHDeveloper&count_private=true&show_icons=true&theme=gotham"/>
   <img height="175em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iHDeveloper&theme=gotham&layout=compact&langs_count=6"/>
-  <img height="175em" src="https://github-profile-trophy.vercel.app/?username=iHDeveloper&theme=discord"/>
+  <img height="125em" src="https://github-profile-trophy.vercel.app/?username=iHDeveloper&theme=discord&column=7"/>
 </div>
 
 👨‍💻 Hard Worker (Proven by **Discord RPC Glitch**)
 
 [![Discord RPC Glitch Prove](./discord-rpc-glitch-prove.png)](https://ihdeveloper.me)
+
 
