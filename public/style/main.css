@@ -1,0 +1,5 @@
+html, body {
+    overflow-x: hidden;
+    background-image: url("../texture/dirt.png");
+    background-repeat: repeat;
+}
