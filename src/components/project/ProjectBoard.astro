@@ -1,0 +1,10 @@
+---
+const { header } = Astro.props;
+---
+<div class="container-fluid pt-2 ps-2 pe-4">
+    { header
+    ? <h6 class="text-center mb-2">I have worked on these projects</h6>
+    : <span></span>
+    }
+    <slot />
+</div>

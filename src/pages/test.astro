@@ -6,6 +6,7 @@ import Command from '../components/Command.astro';
 import Screen from '../components/Screen.astro';
 
 import Project from '../components/Project.astro';
+import ProjectBoard from '../components/project/ProjectBoard.astro';
 ---
 <html lang="en">
     <head>
@@ -21,17 +22,16 @@ import Project from '../components/Project.astro';
             </Screen>
             <Command>test ./components/project.astro</Command>
             <Screen>
-                <Project name="Example Project" year="2021" website="https://github.com/iHDeveloper">
-                    <p slot="description">
-                        It's just an example project.
-                    </p>
-                    <ul>
-                        <li>Example 1</li>
-                        <li>Example 2</li>
-                        <li>Example 3</li>
-                        <li>Example 4</li>
-                    </ul>
-                </Project>
+                <ProjectBoard header="Example project board header">
+                    <Project name="Example Project" year="2021" tag="Example - Component" description="It's just an example project." website="https://github.com/iHDeveloper">
+                        <ul name="achievements">
+                            <li>Example 1</li>
+                            <li>Example 2</li>
+                            <li>Example 3</li>
+                            <li>Example 4</li>
+                        </ul>
+                    </Project>
+                </ProjectBoard>
             </Screen>
         </Main>
     </body>
