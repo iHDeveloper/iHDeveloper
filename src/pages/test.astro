@@ -4,6 +4,8 @@ import Header from '../components/Header.astro';
 
 import Command from '../components/Command.astro';
 import Screen from '../components/Screen.astro';
+
+import Project from '../components/Project.astro';
 ---
 <html lang="en">
     <head>
@@ -16,6 +18,20 @@ import Screen from '../components/Screen.astro';
             <Command>chmod +x test.sh && ./test.sh</Command>
             <Screen>
                 <h1>This is a screen! :)</h1>
+            </Screen>
+            <Command>test ./components/project.astro</Command>
+            <Screen>
+                <Project name="Example Project" year="2021" website="https://github.com/iHDeveloper">
+                    <p slot="description">
+                        It's just an example project.
+                    </p>
+                    <ul>
+                        <li>Example 1</li>
+                        <li>Example 2</li>
+                        <li>Example 3</li>
+                        <li>Example 4</li>
+                    </ul>
+                </Project>
             </Screen>
         </Main>
     </body>
