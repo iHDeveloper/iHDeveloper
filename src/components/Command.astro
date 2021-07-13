@@ -1,0 +1,22 @@
+<style lang="scss">
+.terminal {
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+
+    p.command {
+        font-family: monospace;
+        margin-bottom: 0;
+    }
+}
+</style>
+
+<div class="terminal container-fluid p-0">
+    <div class="row align-items-end">
+        <div class="col">
+            <div class="container-fluid">
+                <p class="command">user@HD-Server> [~/myself] $ <slot /></p>
+            </div>
+        </div>
+    </div>
+</div>

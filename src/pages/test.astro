@@ -1,6 +1,8 @@
 ---
 import Main from '../components/Main.astro';
 import Header from '../components/Header.astro';
+
+import Command from '../components/Command.astro';
 ---
 <html lang="en">
     <head>
@@ -10,6 +12,7 @@ import Header from '../components/Header.astro';
     </head>
     <body>
         <Main>
+            <Command>chmod +x test.sh && ./test.sh</Command>
         </Main>
     </body>
 </html>
