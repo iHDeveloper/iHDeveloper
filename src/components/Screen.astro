@@ -1,0 +1,17 @@
+<style lang="scss">
+    .screen {
+        background-image: url("../../../texture/dirt.png");
+        background-size: 16px 16px;
+        background-repeat: repeat;
+
+        .content {
+            background-color: rgba(0, 0, 0, .45);
+            color: white;
+        }
+    }
+</style>
+<div class="screen">
+    <div class="content m-0 pb-1">
+        <slot />
+    </div>
+</div>
