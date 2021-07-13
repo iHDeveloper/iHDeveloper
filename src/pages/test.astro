@@ -8,6 +8,8 @@ import Screen from '../components/Screen.astro';
 import Project from '../components/Project.astro';
 
 import Experience from '../components/Experience.astro';
+
+import Language from '../components/Language.astro';
 ---
 <html lang="en">
     <head>
@@ -39,10 +41,16 @@ import Experience from '../components/Experience.astro';
                 </Project>
             </Screen>
 
-            <!--- Test Experience-->
+            <!--- Test Experience -->
             <Command>test ./components/Experience.astro</Command>
             <Screen header="Example experience">
                 <Experience name="Example Company" position="Full Stack Developer" duration="2021" color="aqua" icon="blocksmc.png" />
+            </Screen>
+
+            <!--- Test Programming Languages -->
+            <Command>test ./components/Language.astro</Command>
+            <Screen header="Example programming languages">
+                <Language name="Visual Basic" year="2014" />
             </Screen>
         </Main>
     </body>

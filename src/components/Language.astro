@@ -1,0 +1,25 @@
+---
+const { name, year } = Astro.props;
+---
+
+<style lang="scss">
+.language-container {
+    background-color: rgba(0,0,0, .5) !important;
+    border: 4px solid white !important;
+    max-width: 750px !important;
+
+    &:hover {
+        color: yellow !important;
+        cursor: text;
+    }
+
+    .year {
+        color: gray;
+    }
+}
+</style>
+
+<div class="language-container d-flex flex-column justify-content-center align-items-center pt-2 pb-2 pe-3 ps-3 me-2 mb-2">
+    <p class="lead text-center m-0">{name}</p>
+    <p class="year italic m-0">{year}</p>
+</div>
