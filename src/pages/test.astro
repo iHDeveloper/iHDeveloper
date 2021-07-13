@@ -6,6 +6,8 @@ import Command from '../components/Command.astro';
 import Screen from '../components/Screen.astro';
 
 import Project from '../components/Project.astro';
+
+import Experience from '../components/Experience.astro';
 ---
 <html lang="en">
     <head>
@@ -15,11 +17,17 @@ import Project from '../components/Project.astro';
     </head>
     <body>
         <Main>
+
+            <!--- Test Command -->
             <Command>chmod +x test.sh && ./test.sh</Command>
+
+            <!--- Test Screen -->
             <Screen>
                 <h1>This is a screen! :)</h1>
             </Screen>
-            <Command>test ./components/project.astro</Command>
+
+            <!--- Test Projects -->
+            <Command>test ./components/Project.astro</Command>
             <Screen header="Example projects">
                 <Project name="Example Project" year="2021" tag="Example - Component" description="It's just an example project." website="https://github.com/iHDeveloper">
                     <ul name="achievements">
@@ -29,6 +37,12 @@ import Project from '../components/Project.astro';
                         <li>Example 4</li>
                     </ul>
                 </Project>
+            </Screen>
+
+            <!--- Test Experience-->
+            <Command>test ./components/Experience.astro</Command>
+            <Screen header="Example experience">
+                <Experience name="Example Company" position="Full Stack Developer" duration="2021" color="aqua" icon="blocksmc.png" />
             </Screen>
         </Main>
     </body>
