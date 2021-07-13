@@ -10,6 +10,8 @@ import Project from '../components/Project.astro';
 import Experience from '../components/Experience.astro';
 
 import Language from '../components/Language.astro';
+
+import Award from '../components/Award.astro';
 ---
 <html lang="en">
     <head>
@@ -25,32 +27,40 @@ import Language from '../components/Language.astro';
 
             <!--- Test Screen -->
             <Screen>
-                <h1>This is a screen! :)</h1>
+                <p style="color:lightgray;font-style:italic;text-align:center;">Note: This page is used for testing the components of the page.</p>
             </Screen>
 
             <!--- Test Projects -->
             <Command>test ./components/Project.astro</Command>
-            <Screen header="Example projects">
-                <Project name="Example Project" year="2021" tag="Example - Component" description="It's just an example project." website="https://github.com/iHDeveloper">
+            <Screen header="Projects">
+                <Project name="H Company" year="2021" tag="Startup" description='A tech company that starts with letter "H"' website="https://github.com/iHDeveloper">
                     <ul name="achievements">
-                        <li>Example 1</li>
-                        <li>Example 2</li>
-                        <li>Example 3</li>
-                        <li>Example 4</li>
+                        <li>Founding the company</li>
+                        <li>Launching the startup and raise 5 million dollars</li>
+                        <li>Manage a team of one person</li>
                     </ul>
                 </Project>
             </Screen>
 
             <!--- Test Experience -->
             <Command>test ./components/Experience.astro</Command>
-            <Screen header="Example experience">
-                <Experience name="Example Company" position="Full Stack Developer" duration="2021" color="aqua" icon="blocksmc.png" />
+            <Screen header="Expereince">
+                <Experience name="The H Company" position="CEO/CTO" duration="2021" color="aqua" icon="h.png" />
             </Screen>
 
             <!--- Test Programming Languages -->
             <Command>test ./components/Language.astro</Command>
-            <Screen header="Example programming languages">
+            <Screen header="Programming Languages">
                 <Language name="Visual Basic" year="2014" />
+                <Language name="ZigLang" year="2021" />
+            </Screen>
+
+            <!--- Test Award -->
+            <Command>test ./components/Award.astro</Command>
+            <Screen header="Awards">
+                <Award name="Made this website" month="July">
+                    <span>The person who created this website</span>
+                </Award>
             </Screen>
         </Main>
     </body>
