@@ -1,17 +1,30 @@
+---
+const { header } = Astro.props;
+---
 <style lang="scss">
-    .screen {
-        background-image: url("/texture/dirt.png");
-        background-size: 16px 16px;
-        background-repeat: repeat;
+.screen {
+    background-image: url("/texture/dirt.png");
+    background-size: 16px 16px;
+    background-repeat: repeat;
 
-        .content {
-            background-color: rgba(0, 0, 0, .45);
-            color: white;
-        }
+    .header {
+        color: yellow;
     }
+
+    .content {
+        background-color: rgba(0, 0, 0, .45);
+        color: white;
+    }
+}
 </style>
 <div class="screen">
     <div class="content m-0 pb-1">
-        <slot />
+        <div class="container-fluid pt-2 ps-2 pe-4">
+            { header
+            ? <h6 class="header text-center mb-2">{header}</h6>
+            : <span></span>
+            }
+            <slot />
+        </div>
     </div>
 </div>
