@@ -2,8 +2,9 @@
   "name": "ihdeveloper",
   "version": "0.0.0",
   "scripts": {
-    "start": "astro dev",
-    "build": "astro build"
+    "start": "yarn run copy-bootstrap && astro dev",
+    "build": "yarn run copy-bootstrap && astro build",
+    "copy-bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js public/js/bootstrap.js"
   },
   "private": true,
   "dependencies": {
