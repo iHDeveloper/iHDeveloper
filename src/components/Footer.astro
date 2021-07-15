@@ -1,7 +1,27 @@
 ---
 import Command from './Command.astro';
 import Screen from './Screen.astro';
+import Button from './project/Button.astro';
 ---
+<style lang="scss">
+.btn {
+  margin-right: .25rem !important;
+}
+</style>
+
+<div class="mt-4"></div>
+
+<Command>sh ./contact-us</Command>
+<Screen>
+  <div class="d-flex flex-wrap justify-content-around btn-group pt-2 pb-2" role="group" aria-label="Contact Me">
+    <Button href="https://github.com/iHDeveloper">Github</Button>
+    <Button href="https://www.linkedin.com/in/ihdeveloper">LinkedIn</Button>
+    <Button href="https://www.spigotmc.org/members/ihdeveloper.342233">Spigot</Button>
+    <Button href="https://discord.com/invite/PYjh5xg">Discord</Button>
+    <Button href="https://www.youtube.com/channel/UCsEUX-0TAGHWHE6IWWfT0ag">Youtube</Button>
+    <Button href="https://twitter.com/iHDeveloper">Twitter</Button>
+  </div>
+</Screen>
 
 <Command>exit</Command>
 <Screen>
