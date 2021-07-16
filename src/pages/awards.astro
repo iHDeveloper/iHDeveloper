@@ -11,6 +11,18 @@ import Screen from '../components/Screen.astro';
 import AwardContainer from '../components/containers/AwardContainer.astro';
 import Award from '../components/Award.astro';
 ---
+<style lang="scss">
+.years-later {
+    font-family: 'Minecraft Italic', monospace;
+    text-align: center;
+
+    color: lightgray;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+</style>
+
 <html lang="en">
     <head>
         <title>iHDeveloper - Awards</title>
@@ -69,6 +81,8 @@ import Award from '../components/Award.astro';
                     Silver Medal in Chemistry Riyadh Competition
                 </Award>
             </AwardContainer>
+
+            <h5 class="years-later">- 3 years later -</h5>
 
             <Title>2014</Title>
             <AwardContainer>
