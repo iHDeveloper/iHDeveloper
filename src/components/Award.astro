@@ -1,7 +1,8 @@
 ---
-const {name, month, img} = Astro.props;
+const {name, month, color, img} = Astro.props;
 
-const imgURL = (img ? "/img/award" + img : "/texture/question-mark-2d.png");
+const imgURL = (img ? "/icon/award/" + img : "/texture/question-mark-2d.png");
+const colorStyle = "color:" + (color ? color : "yellow") + ";";
 ---
 
 <style lang="scss">
@@ -28,7 +29,7 @@ const imgURL = (img ? "/img/award" + img : "/texture/question-mark-2d.png");
 
 <div class="award-container container-sm d-flex flex-row flex-wrap p-2 mb-3 me-3">
     <img class="flex-shrink-0 me-3" src="{imgURL}" width="64" height="64" />
-    <h4 class="d-flex flex-column m-0">
+    <h4 class="d-flex flex-column m-0" style={colorStyle}>
         {name}
         <span class="tag">{month}</span>
     </h4>

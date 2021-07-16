@@ -1,0 +1,84 @@
+---
+import Main from '../components/Main.astro';
+import Header from '../components/Header.astro';
+import Navbar from '../components/ui/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+import Title from '../components/Title.astro';
+import Command from '../components/Command.astro';
+import Screen from '../components/Screen.astro';
+
+import AwardContainer from '../components/containers/AwardContainer.astro';
+import Award from '../components/Award.astro';
+---
+<html lang="en">
+    <head>
+        <title>iHDeveloper - Awards</title>
+
+        <Header />
+    </head>
+    <body>
+        <Navbar />
+
+        <Main>
+            <Command>chmod +x awards.sh</Command>
+            <Command>./awards.sh</Command>
+
+            <Title>2020</Title>
+            <AwardContainer>
+                <Award name="Trained 200 students!" month="April" img="makeitandplayit.png">
+                    Trained 200 students on Game Development!
+                </Award>
+            </AwardContainer>
+
+            <Title>2019</Title>
+            <AwardContainer>
+                <Award name="National Player" month="May" color="gold">
+                    Member of the National Informatics Team
+                </Award>
+                <Award name="Full Stack Developer" month="December" color="aqua" img="udacity.svg">
+                    <span>Graduated from <span style="color:aqua;">Udacity</span> with <span style="color:yellow;">Full Stack Nanodegree</span></span>
+                </Award>
+            </AwardContainer>
+
+            <Title>2018</Title>
+            <AwardContainer>
+                <Award name="First Google Contest!" month="December" color="orange" img="google-code-in.png">
+                    Participate in Google Code-In
+                </Award>
+                <Award name="Hacking health future" month="November" color="cyan" img="mit-health-hackathon.png">
+                    Participate in MIT Health Hackathon
+                </Award>
+                <Award name="Hacking smart future" month="September" color="darkgray" img="junction.png">
+                    Participate in Junction Hackathon (Smart city & IoT)
+                </Award>
+                <Award name="First Hackathon!" month="August" color="darkcyan" img="hajj-hackathon.png">
+                    Participate in Hajj Hackathon
+                </Award>
+            </AwardContainer>
+
+            <Title>2017</Title>
+            <AwardContainer>
+                <Award name="First competition win!" month="December" color="gold">
+                    Got 1st in Riyadh Programming Competition
+                </Award>
+                <Award name="Smartest Robot Brain" month="December" color="aqua">
+                    Best program in Riyadh Sumo Robot Competition
+                </Award>
+                <Award name="First silver medal!" month="January" color="gold">
+                    Silver Medal in Chemistry Riyadh Competition
+                </Award>
+            </AwardContainer>
+
+            <Title>2014</Title>
+            <AwardContainer>
+                <Award name="First medal ever!" month="Unknown" color="gold">
+                    Bronze Medal in Mathematics Riyadh Competition
+                </Award>
+            </AwardContainer>
+
+            <Footer />
+        </Main>
+    </body>
+</html>
+
