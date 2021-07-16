@@ -1,0 +1,97 @@
+---
+import Main from '../components/Main.astro';
+import Header from '../components/Header.astro';
+import Navbar from '../components/ui/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+import Command from '../components/Command.astro';
+import Screen from '../components/Screen.astro';
+
+import ProjectContainer from '../components/containers/ProjectContainer.astro';
+import Project from '../components/Project.astro';
+
+import ExperienceContainer from '../components/containers/ExperienceContainer.astro';
+import Experience from '../components/Experience.astro';
+
+import LanguageContainer from '../components/containers/LanguageContainer.astro';
+import Language from '../components/Language.astro';
+---
+<html lang="en">
+    <head>
+        <title>iHDeveloper - About me</title>
+
+        <Header />
+    </head>
+    <body>
+        <Navbar />
+        
+        <Main>
+            <Command>whoami</Command>
+            <Screen>
+                <p class="text-center lead">My name is Hamza.</p>
+            </Screen>
+
+            <Command>cat ./about-me.txt</Command>
+            <Screen header="About who I am">
+                <p class="text-center lead">
+                    I like to mod things and design backend/cross-platform systems. I like reading, walking, driving, and gaming.
+                </p>
+            </Screen>
+
+            <Command>sh ./projects</Command>
+            <Screen header="I have worked on these projects">
+                <ProjectContainer>
+                    <Project name="Spigot Dev Tools" year="2021" tag="Tools - Modded Minecraft" description="Minecraft Mod for providing tools to understand the game world on the server-side aspect" website="https://github.com/iHDeveloper/spigot-dev-tools">
+                        <ul>
+                            <li>Design a protocol between the mod/plugin that's flexible on most game versions</li>
+                            <li>Design an API to require one-line of Java code to easy to use</li>
+                        </ul>
+                    </Project>
+                    <Project name="Humans" year="2020" tag="Open World - Modded Minecraft" description="Multiplayer game with open world following a certain timeline and events" website="https://github.com/iHDeveloper/Humans">
+                        <ul>
+                            <li>Design flexible architecture to easily manipulate the game world</li>
+                            <li>Create scene system for presenting stories in the game</li>
+                            <li>Write NPC system that doesn't relay on any third-party plugins</li>
+                        </ul>
+                    </Project>
+                    <Project name="Remote Access for Smart Board" year="2018" tag="Cross-Platform Application" description="Mobile App for allowing the user to access and control the smart board with built-in features">
+                        <ul>
+                            <li>Design protocol for communicating between the remote and the board</li>
+                            <li>Use ElectronJS to provide an interactive display and control the smart board</li>
+                            <li>Writes a WebSocket server using Java to connect between the remote and the board</li>
+                        </ul>
+                    </Project>
+                </ProjectContainer>
+            </Screen>
+
+            <Command>sh ./experience</Command>
+            <Screen header="I have worked with these servers">
+                <ExperienceContainer>
+                    <Experience name="BlocksMC" position="Technical Consultant" duration="2020" color="aqua" icon="blocksmc.png" />
+                    <Experience name="BlocksMC" position="Java Minigame Developer" duration="2018" color="aqua" icon="blocksmc.png" />
+                    <Experience name="Heroz PvP" position="Java Developer" duration="2016 - 2017" color="gold" icon="heroz-sa.png" />
+                </ExperienceContainer>
+            </Screen>
+
+            <Command>cat ./languages.txt</Command>
+            <Screen header="Languages I have used before">
+                <LanguageContainer>
+                    <Language name="Visual Basic" year="2014" />
+                    <Language name="C#" year="2015" />
+                    <Language name="Java" year="2016" />
+                    <Language name="JavaScript" year="2016" />
+                    <Language name="PHP" year="2017" />
+                    <Language name="Lua" year="2017" />
+                    <Language name="Python" year="2018" />
+                    <Language name="Typescript" year="2019" />
+                    <Language name="Dart" year="2019" />
+                    <Language name="C/C++" year="2019" />
+                    <Language name="Kotlin" year="2019" />
+                    <Language name="Elixir" year="2019" />
+                </LanguageContainer>
+            </Screen>
+
+            <Footer />
+        </Main>
+    </body>
+</html>
