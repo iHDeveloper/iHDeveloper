@@ -1,0 +1,39 @@
+---
+const {name, month, color, img} = Astro.props;
+
+const imgURL = (img ? "/img/award/" + img : "/img/texture/question-mark-2d.png");
+const colorStyle = "color:" + (color ? color : "yellow") + ";";
+---
+
+<style lang="scss">
+.award-container {
+    background-color: rgba(0,0,0, .5) !important;
+    border: 4px solid white !important;
+    max-width: 550px !important;
+    margin-left: 0 !important;
+
+    h4 {
+        color: yellow;
+
+        .tag {
+            color: gray;
+            font-style: italic;
+        }
+    }
+
+    .description {
+        color: white;
+    }
+}
+</style>
+
+<div class="award-container container-sm d-flex flex-row flex-wrap p-2 mb-3 me-3">
+    <img class="flex-shrink-0 me-3" src="{imgURL}" width="64" height="64" />
+    <h4 class="d-flex flex-column m-0" style={colorStyle}>
+        {name}
+        <span class="tag">{month}</span>
+    </h4>
+    <p class="d-flex justify-content-center w-100 description lead mb-0 text-center">
+        <slot />
+    </p>
+</div>

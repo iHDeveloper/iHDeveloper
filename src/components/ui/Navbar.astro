@@ -1,0 +1,58 @@
+
+<style lang="scss">
+.custom-navbar {
+    background-image: url("/img/texture/dirt.png");
+    background-repeat: repeat;
+    box-shadow: 3px 2px 4px 4px black;
+
+    font-family: 'Minecraft Regular', monospace;
+
+    .container-fluid {
+        background-color: rgba(0, 0, 0, .45);
+        color: white !important;
+    }
+
+    .navbar-toggler {
+        color: white !important;
+        border-color: white !important;
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+        }
+    }
+
+    a.nav-link, a.navbar-brand {
+        color: white !important;
+    }
+
+    a.nav-link {
+        &.active, &:hover {
+            color: yellow !important;
+        }
+    }
+}
+</style>
+
+<nav class="custom-navbar navbar navbar-expand-lg navbar-light bg-light p-0 fixed-top mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand">&lt;iHDeveloper /&gt;</a>
+    <div class="p-2">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a id="about" class="nav-link" href="/">About me</a>
+        </li>
+        <li class="nav-item">
+          <a id="bio" class="nav-link" href="/bio">Bio</a>
+        </li>
+        <li class="nav-item">
+          <a id="awards" class="nav-link" href="/awards">Awards</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

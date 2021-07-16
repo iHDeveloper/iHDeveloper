@@ -1,0 +1,48 @@
+---
+const { name, position, duration, icon, color } = Astro.props
+
+const iconURL = "/img/experience/" + icon;
+const positionStyle = "color: " + (color ? color : "white");
+---
+
+<style lang="scss">
+.experience-layout {
+    background-color: rgba(0,0,0, .5) !important;
+    border: 4px solid white !important;
+    max-width: 750px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: auto !important;
+
+    .position {
+        color: darkcyan;
+    }
+    .duration {
+        color: gray;
+    }
+}
+</style>
+
+<div class="container-sm experience-layout p-3 mb-3">
+    <div class="d-inline-flex">
+
+        <!-- Experience Icon -->
+        <div class="flex-shrink-0">
+            <img src="{iconURL}" width="64" height="64" />
+        </div>
+
+        <div class="d-inline-flex flex-column ms-4">
+
+            <!-- Experience Company Name -->
+            <h3 class="m-0" style="{positionStyle}">{name}</h3>
+
+            <!-- Experience Position-->
+            <p class="position lead mb-1">{position}</p>
+
+            <!-- Experience Duration-->
+            <p class="duration m-0">{duration}</p>
+    
+        </div>
+
+    </div>
+</div>

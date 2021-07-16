@@ -1,0 +1,83 @@
+---
+/**
+ * <Project name="Project Name" year="2021" description="Example Description" website="https://example.com">
+ *  <ul>
+ *      <li>Achievemnet 1</li>
+ *      <li>Achievement 2</li>
+ *  </ul>
+ * </Project>
+ */
+import Button from './ui/Button.astro';
+
+const { name, year, tag, description, website } = Astro.props;
+---
+<style lang="scss">
+.project-container {
+    background-color: rgba(0,0,0, .5) !important;
+    border: 4px solid white !important;
+    max-width: 750px !important;
+    font-family: 'Minecraft Regular', monospace;
+
+    .name {
+        font-family: 'Minecraft Bold', monospace;
+        color: gold;
+    }
+    .year {
+        color: rgb(169, 169, 169);
+    }
+    .tag {
+        font-style: italic;
+        color: rgb(128, 128, 128);
+    }
+    .description {
+        text-align: center;
+    }
+    .achievements {
+        text-align: left;
+        color: lightgray;
+    }
+}
+</style>
+<div class="container-md project-container pt-2 pb-2 pe-4 ps-4 m-2">
+
+    <!-- Project Header -->
+    <div class="row">
+        <div class="col-9 p-0">
+            <div class="d-flex flex-column">
+                <div class="d-inline-flex">
+                    <h4 class="name m -0">{name}</h4>
+                    <p class="year italic m-0 ms-1">{year}</p>
+                </div>
+                <p class="tag italic m-0 ms-1">{tag}</p>
+            </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-2 d-flex justify-content-end">
+            <div class="align-self-center">
+                <img class="project-icon" src="/img/question-mark.png" width="32" height="32" />
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <!-- Project Description -->
+        <div class="description lead">
+            <snap>{description}</snap>
+        </div>
+        <!-- Project Achievements -->
+        <div class="achievements mt-3">
+            <slot name="achievements" />
+        </div>
+    </div>
+
+    <!-- Project Website -->
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8 d-flex justify-content-end align-items-center">
+            {website
+            ? <Button href="{website}">Github</Button>
+            : <span></span>}
+        </div>
+    </div>
+
+</div>

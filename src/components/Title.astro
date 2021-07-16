@@ -1,0 +1,21 @@
+<style lang="scss">
+.title {
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+
+    h1 {
+        text-align: center;
+        font-family: 'Minecraft Bold', monospace;
+        margin-bottom: 0;
+    }
+}
+</style>
+
+<div class="title container-fluid p-0">
+    <div class="row align-items-end">
+        <div class="col mb-1">
+            <h1 class="display-2"><slot /></h1>
+        </div>
+    </div>
+</div>

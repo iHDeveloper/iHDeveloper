@@ -1,0 +1,30 @@
+---
+const { href } = Astro.props;
+---
+
+<style lang="scss">
+.btn {
+    background-image: url("/img/texture/button.png");
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    border-color: transparent !important;
+
+    font-family: 'Minecraft Regular', monospace;
+
+    &:hover {
+        color: yellow !important;
+    }
+
+    &:focus {
+        outline: 0 !important;
+        box-shadow: 0 0 0 0 transparent !important;
+    }
+}
+</style>
+
+<a href="{href}" class="btn btn-primary" target="_blank">
+    <slot />
+</a>
