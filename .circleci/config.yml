@@ -82,7 +82,11 @@ jobs:
 workflows:
   main:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              only:
+              - master
       - deploy_to_firebase:
           requires:
           - build
