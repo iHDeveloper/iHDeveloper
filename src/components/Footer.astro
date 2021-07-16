@@ -7,6 +7,10 @@ import Button from './ui/Button.astro';
 .btn {
   margin-right: .25rem !important;
 }
+.last-message {
+  font-family: 'Minecraft Italic', monospace;
+  color: gray;  
+}
 </style>
 
 <div class="mt-4"></div>
@@ -24,16 +28,14 @@ import Button from './ui/Button.astro';
 </Screen>
 
 <Command>exit</Command>
-<Screen>
-    <div class="container-fluid pb-2">
-        <p class="lead text-center">
-          iHDeveloper &copy; 2021. All rights reserved. <br />
-          All trademarks, logos, and company names are the property of their respective owners.
-          <br />
-          <br />
-          Special thanks to everyone who supported and helped me into becoming who I am today <strong style="color:red">&lt;3</strong>
-        </p>
-    </div>
-</Screen>
+<div class="container-fluid pb-2">
+    <p class="text-center last-message">
+      iHDeveloper &copy; 2021. All rights reserved. <br />
+      All trademarks, logos, and company names are the property of their respective owners.
+      <br />
+      <br />
+      Special thanks to everyone who supported and helped me into becoming who I am today <strong style="color:red">&lt;3</strong>
+    </p>
+</div>
 
 <script src="/js/bootstrap.js"></script> 
